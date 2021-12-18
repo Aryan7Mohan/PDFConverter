@@ -10,3 +10,9 @@ def delete():
     filelist = glob.glob(os.path.join(dir, "*"))
     for f in filelist:
         os.remove(f)
+
+
+    dir = 'result/'
+    filelist = glob.glob(os.path.join(dir, "*"))
+    for f in filelist:
+        os.remove(f)

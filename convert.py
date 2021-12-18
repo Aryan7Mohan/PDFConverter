@@ -3,7 +3,7 @@ import os
 from fpdf import FPDF
 import glob
 from PIL import Image
-
+import random
 
 # STEP 2
 # file path you want to extract images from
@@ -14,9 +14,10 @@ from PIL import Image
 
 
 
-def convert():
+def convert(ROI_number):
     imagelist = glob.glob('temp/*')
     pdf = FPDF(orientation = 'P', unit = 'mm', format='A4')
+    print("ROI",ROI_number)
     pdf.set_auto_page_break(0)
     # imagelist is the list with all image filenames
     for imageFile in imagelist:
